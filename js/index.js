@@ -10,12 +10,15 @@ const keyCodeObject = {
   key: '',
 };
 const keyCodeResults = [];
+let lastKeyCode = 0;
 
 const setKeyEvent = (ev) => {
   const result = Object.assign({}, keyCodeObject);
   Object.keys(keyCodeObject).forEach((key) => {
     result[key] = ev[key];
   });
+
+  lastKeyCode = result.keyCode;
   return result;
 }
 
@@ -61,7 +64,13 @@ const initalizeTable = () => {
   }
 }
 
+const onKeyup = (ev) => {
+  lastKeyCode = 0;
+}
+
 const onKeydown = (ev) => {
+  if (lastKeyCode === ev.keyCode) return;
+
   const object = setKeyEvent(ev);
   pushObject(object);
   renderTableData();
