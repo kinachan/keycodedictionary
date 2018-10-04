@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>KeyCode</title>
+  <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+  <section class="description">
+    <div class="container">
+      <div class="row">
+        <div class="col-md">
+          <div class="col-sm-12 col-xs-12">
+            <h1>キーコード入力辞典</h1>
+            <h6>Key code input dictionary</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="input-field">
+    <div class="container">
+      <div class="row">
+        <div class="col-md">
+          <div class="col-sm-12 col-xs-12">
+            <form>
+              <div class="form-group">
+                <label for="KeyCode">入力フィールド</label>
+                <input type="text" class="form-control" id="KeyCode" placeholder="何かキーを入力してください">
+                <!-- <small id="KeyCode" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md">
+          <div class="col-sm-12 col-xs-12">
+            <table id="KeyCodeTable" class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">押されたキー</th>
+                  <th scope="col">キーコード</th>
+                  <th scope="col">Ctrl Key</th>
+                  <th scope="col">Sfhit Key</th>
+                  <th scope="col">Alt Key</th>
+                </tr>
+              </thead>
+              <tbody id="table-data">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+<script src="./js/index.js"></script>
+
+</html>
