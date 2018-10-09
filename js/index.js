@@ -69,6 +69,7 @@ const onKeyup = (ev) => {
 }
 
 const onKeydown = (ev) => {
+  ev.preventDefault();
   if (lastKeyCode === ev.keyCode) return;
 
   const object = setKeyEvent(ev);
